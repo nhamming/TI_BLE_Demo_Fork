@@ -31,10 +31,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    TIBLEUIBatteryBarLabel.text = @"BAT";
-    t = [[TIBLECBKeyfob alloc] init];
-    [t controlSetup:1];
-    t.delegate = self;
+    t = [[TIBLECBKeyfob alloc] init];   // Init TIBLECBKeyfob class.
+    [t controlSetup:1];                 // Do initial setup of TIBLECBKeyfob class.
+    t.delegate = self;                  // Set TIBLECBKeyfob delegate class to point at methods implemented in this class.
     
     
 }
@@ -91,23 +90,26 @@
 - (IBAction)TIBLEUIScanForPeripheralsButton:(id)sender {
     if (t.activePeripheral) if(t.activePeripheral.isConnected) [[t CM] cancelPeripheralConnection:[t activePeripheral]];
     if (t.peripherals) t.peripherals = nil;
-    [t findBLEPeripherals:2];
+    [t findBLEPeripherals:2];   
     [NSTimer scheduledTimerWithTimeInterval:(float)2.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
     [TIBLEUISpinner startAnimating];
 }
 
 - (void) batteryIndicatorTimer:(NSTimer *)timer {
-    TIBLEUIBatteryBar.progress = t.batteryLevel / 100;
-    [t readBattery:[t activePeripheral]];
+    TIBLEUIBatteryBar.progress = t.batteryLevel / 100;  
+    [t readBattery:[t activePeripheral]];               // Read battery value of keyfob again
     
 }
 
+
+
+// Method from TIBLECBKeyfobDelegate, called when accelerometer values are updated
 -(void) accelerometerValuesUpdated:(char)x y:(char)y z:(char)z {
     TIBLEUIAccelXBar.progress = (float)(x + 50) / 100;
     TIBLEUIAccelYBar.progress = (float)(y + 50) / 100;
     TIBLEUIAccelZBar.progress = (float)(z + 50) / 100;
 }
-
+// Method from TIBLECBKeyfobDelegate, called when key values are updated
 -(void) keyValuesUpdated:(char)sw {
     printf("Key values updated ! \r\n");
     if (sw & 0x1) [TIBLEUILeftButton setOn:TRUE];
@@ -117,28 +119,32 @@
     
 }
 
+//Method from TIBLECBKeyfobDelegate, called when keyfob has been found and all services have been discovered
 -(void) keyfobReady {
-    [NSTimer scheduledTimerWithTimeInterval:(float)2.0 target:self selector:@selector(batteryIndicatorTimer:) userInfo:nil repeats:YES];
-    [t enableAccelerometer:[t activePeripheral]];
-    [t enableButtons:[t activePeripheral]];
-    [t enableTXPower:[t activePeripheral]];
-    [TIBLEUISpinner stopAnimating];
+    // Start battery indicator timer, calls batteryIndicatorTimer method every 2 seconds
+    [NSTimer scheduledTimerWithTimeInterval:(float)2.0 target:self selector:@selector(batteryIndicatorTimer:) userInfo:nil repeats:YES]; 
+    [t enableAccelerometer:[t activePeripheral]];   // Enable accelerometer (if found)
+    [t enableButtons:[t activePeripheral]];         // Enable button service (if found)
+    [t enableTXPower:[t activePeripheral]];         // Enable TX power service (if found)
+    [TIBLEUISpinner stopAnimating];             
 }
 
+//Method from TIBLECBKeyfobDelegate, called when TX powerlevel values are updated
 -(void) TXPwrLevelUpdated:(char)TXPwr {
 }
 
-
+// Called when scan period is over to connect to the first found peripheral
 -(void) connectionTimer:(NSTimer *)timer {
     if(t.peripherals.count > 0)
     {
         [t connectPeripheral:[t.peripherals objectAtIndex:0]];
 
     }
+    else [TIBLEUISpinner stopAnimating];
 }
 
 - (IBAction)TIBLEUISoundBuzzerButton:(id)sender {
-    [t soundBuzzer:0x02 p:[t activePeripheral]];
+    [t soundBuzzer:0x02 p:[t activePeripheral]]; //Sound buzzer with 0x02 as data value
 }
 
 @end
