@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F20FB92145EA9F1002EC24F /* TIBLECBKeyfob.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F20FB91145EA9F1002EC24F /* TIBLECBKeyfob.m */; };
 		7F537FBF145C3B7B0098DEDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F537FBE145C3B7B0098DEDA /* UIKit.framework */; };
 		7F537FC1145C3B7B0098DEDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F537FC0145C3B7B0098DEDA /* Foundation.framework */; };
 		7F537FC3145C3B7B0098DEDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F537FC2145C3B7B0098DEDA /* CoreGraphics.framework */; };
@@ -21,6 +22,12 @@
 		7F537FE2145C3B7B0098DEDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F537FC0145C3B7B0098DEDA /* Foundation.framework */; };
 		7F537FEA145C3B7B0098DEDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F537FE8145C3B7B0098DEDA /* InfoPlist.strings */; };
 		7F537FED145C3B7B0098DEDA /* TI_BLE_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F537FEC145C3B7B0098DEDA /* TI_BLE_DemoTests.m */; };
+		7F537FF7145C3BA80098DEDA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F537FF6145C3BA80098DEDA /* CoreBluetooth.framework */; };
+		7F537FF9145C3BC20098DEDA /* ti_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F537FF8145C3BC20098DEDA /* ti_logo.jpg */; };
+		7F537FFB145C3CC50098DEDA /* ti_icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F537FFA145C3CC50098DEDA /* ti_icon_retina.png */; };
+		7F537FFD145C3CCE0098DEDA /* ti_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F537FFC145C3CCE0098DEDA /* ti_icon.png */; };
+		7F537FFF145C3D5A0098DEDA /* ti_icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F537FFE145C3D5A0098DEDA /* ti_icon_ipad.png */; };
+		7FBB121E14603F4100F95BF2 /* ti_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F537FF8145C3BC20098DEDA /* ti_logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,26 +41,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F20FB90145EA9F1002EC24F /* TIBLECBKeyfob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIBLECBKeyfob.h; sourceTree = "<group>"; };
+		7F20FB91145EA9F1002EC24F /* TIBLECBKeyfob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIBLECBKeyfob.m; sourceTree = "<group>"; };
+		7F20FB94145EBA66002EC24F /* TIBLECBKeyfobDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIBLECBKeyfobDefines.h; sourceTree = "<group>"; };
 		7F537FBA145C3B7B0098DEDA /* TI-BLE-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TI-BLE-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F537FBE145C3B7B0098DEDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7F537FC0145C3B7B0098DEDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7F537FC2145C3B7B0098DEDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7F537FC6145C3B7B0098DEDA /* TI-BLE-Demo-Info.plist */ = {isa = PBXFileReference; path = "TI-BLE-Demo-Info.plist"; sourceTree = "<group>"; };
+		7F537FC6145C3B7B0098DEDA /* TI-BLE-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TI-BLE-Demo-Info.plist"; sourceTree = "<group>"; };
 		7F537FC8145C3B7B0098DEDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F537FCA145C3B7B0098DEDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7F537FCC145C3B7B0098DEDA /* TI-BLE-Demo-Prefix.pch */ = {isa = PBXFileReference; path = "TI-BLE-Demo-Prefix.pch"; sourceTree = "<group>"; };
-		7F537FCD145C3B7B0098DEDA /* TIBLEAppDelegate.h */ = {isa = PBXFileReference; path = TIBLEAppDelegate.h; sourceTree = "<group>"; };
+		7F537FCC145C3B7B0098DEDA /* TI-BLE-Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TI-BLE-Demo-Prefix.pch"; sourceTree = "<group>"; };
+		7F537FCD145C3B7B0098DEDA /* TIBLEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIBLEAppDelegate.h; sourceTree = "<group>"; };
 		7F537FCE145C3B7B0098DEDA /* TIBLEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIBLEAppDelegate.m; sourceTree = "<group>"; };
 		7F537FD1145C3B7B0098DEDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		7F537FD4145C3B7B0098DEDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		7F537FD6145C3B7B0098DEDA /* TIBLEViewController.h */ = {isa = PBXFileReference; path = TIBLEViewController.h; sourceTree = "<group>"; };
+		7F537FD6145C3B7B0098DEDA /* TIBLEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIBLEViewController.h; sourceTree = "<group>"; };
 		7F537FD7145C3B7B0098DEDA /* TIBLEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIBLEViewController.m; sourceTree = "<group>"; };
 		7F537FDE145C3B7B0098DEDA /* TI-BLE-DemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TI-BLE-DemoTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F537FDF145C3B7B0098DEDA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7F537FE7145C3B7B0098DEDA /* TI-BLE-DemoTests-Info.plist */ = {isa = PBXFileReference; path = "TI-BLE-DemoTests-Info.plist"; sourceTree = "<group>"; };
+		7F537FE7145C3B7B0098DEDA /* TI-BLE-DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TI-BLE-DemoTests-Info.plist"; sourceTree = "<group>"; };
 		7F537FE9145C3B7B0098DEDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7F537FEB145C3B7B0098DEDA /* TI_BLE_DemoTests.h */ = {isa = PBXFileReference; path = TI_BLE_DemoTests.h; sourceTree = "<group>"; };
+		7F537FEB145C3B7B0098DEDA /* TI_BLE_DemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TI_BLE_DemoTests.h; sourceTree = "<group>"; };
 		7F537FEC145C3B7B0098DEDA /* TI_BLE_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TI_BLE_DemoTests.m; sourceTree = "<group>"; };
+		7F537FF6145C3BA80098DEDA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		7F537FF8145C3BC20098DEDA /* ti_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ti_logo.jpg; sourceTree = "<group>"; };
+		7F537FFA145C3CC50098DEDA /* ti_icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ti_icon_retina.png; sourceTree = "<group>"; };
+		7F537FFC145C3CCE0098DEDA /* ti_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ti_icon.png; sourceTree = "<group>"; };
+		7F537FFE145C3D5A0098DEDA /* ti_icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ti_icon_ipad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F537FF7145C3BA80098DEDA /* CoreBluetooth.framework in Frameworks */,
 				7F537FBF145C3B7B0098DEDA /* UIKit.framework in Frameworks */,
 				7F537FC1145C3B7B0098DEDA /* Foundation.framework in Frameworks */,
 				7F537FC3145C3B7B0098DEDA /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +99,11 @@
 		7F537FAF145C3B7A0098DEDA = {
 			isa = PBXGroup;
 			children = (
+				7F537FFE145C3D5A0098DEDA /* ti_icon_ipad.png */,
+				7F537FFC145C3CCE0098DEDA /* ti_icon.png */,
+				7F537FFA145C3CC50098DEDA /* ti_icon_retina.png */,
+				7F537FF8145C3BC20098DEDA /* ti_logo.jpg */,
+				7F537FF6145C3BA80098DEDA /* CoreBluetooth.framework */,
 				7F537FC4145C3B7B0098DEDA /* TI-BLE-Demo */,
 				7F537FE5145C3B7B0098DEDA /* TI-BLE-DemoTests */,
 				7F537FBD145C3B7B0098DEDA /* Frameworks */,
@@ -113,6 +134,9 @@
 		7F537FC4145C3B7B0098DEDA /* TI-BLE-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7F20FB94145EBA66002EC24F /* TIBLECBKeyfobDefines.h */,
+				7F20FB90145EA9F1002EC24F /* TIBLECBKeyfob.h */,
+				7F20FB91145EA9F1002EC24F /* TIBLECBKeyfob.m */,
 				7F537FCD145C3B7B0098DEDA /* TIBLEAppDelegate.h */,
 				7F537FCE145C3B7B0098DEDA /* TIBLEAppDelegate.m */,
 				7F537FD0145C3B7B0098DEDA /* MainStoryboard_iPhone.storyboard */,
@@ -225,7 +249,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBB121E14603F4100F95BF2 /* ti_logo.jpg in Resources */,
 				7F537FC9145C3B7B0098DEDA /* InfoPlist.strings in Resources */,
+				7F537FFB145C3CC50098DEDA /* ti_icon_retina.png in Resources */,
+				7F537FFD145C3CCE0098DEDA /* ti_icon.png in Resources */,
+				7F537FFF145C3D5A0098DEDA /* ti_icon_ipad.png in Resources */,
 				7F537FD2145C3B7B0098DEDA /* MainStoryboard_iPhone.storyboard in Resources */,
 				7F537FD5145C3B7B0098DEDA /* MainStoryboard_iPad.storyboard in Resources */,
 			);
@@ -235,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F537FF9145C3BC20098DEDA /* ti_logo.jpg in Resources */,
 				7F537FEA145C3B7B0098DEDA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +294,7 @@
 				7F537FCB145C3B7B0098DEDA /* main.m in Sources */,
 				7F537FCF145C3B7B0098DEDA /* TIBLEAppDelegate.m in Sources */,
 				7F537FD8145C3B7B0098DEDA /* TIBLEViewController.m in Sources */,
+				7F20FB92145EA9F1002EC24F /* TIBLECBKeyfob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +474,7 @@
 				7F537FF2145C3B7B0098DEDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F537FF3145C3B7B0098DEDA /* Build configuration list for PBXNativeTarget "TI-BLE-DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +483,7 @@
 				7F537FF5145C3B7B0098DEDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
