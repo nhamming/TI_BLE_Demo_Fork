@@ -1,0 +1,20 @@
+# xcode noise
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+*.pyc
+*~.nib/
+build/*
+ 
+# Textmate - if you build your xcode projects with it
+*.tm_build_errors
+ 
+# old skool
+.svn
+ 
+# osx noise
+.DS_Store
+profile
+
+# cucumber 
+Gemfile.lock
+.bundle

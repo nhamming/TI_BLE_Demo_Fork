@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11B26" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -119,28 +119,12 @@
                     </connections>
                 </viewController>
             </objects>
+            <point key="canvasLocation" x="65" y="-96"/>
         </scene>
     </scenes>
     <resources>
         <image name="ti_logo.jpg" width="425" height="397"/>
     </resources>
-    <classes>
-        <class className="TIBLEViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIBLEViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="TIBLEUIScanForPeripheralsButton:"/>
-                <relationship kind="action" name="TIBLEUISoundBuzzerButton:"/>
-                <relationship kind="outlet" name="TIBLEUIAccelXBar" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="TIBLEUIAccelYBar" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="TIBLEUIAccelZBar" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="TIBLEUIBatteryBar" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="TIBLEUIBatteryBarLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="TIBLEUILeftButton" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="TIBLEUIRightButton" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="TIBLEUISpinner" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
